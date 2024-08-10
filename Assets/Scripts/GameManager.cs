@@ -42,16 +42,12 @@ public class GameManager : MonoBehaviour
     {
         switch (gamePhase)
         {
-            /*case GamePhase.movingBall:
-                cueBallController.enabled = true;
-                poolStickController.enabled = false;
+            case GamePhase.movingBall:
                 break;
 
             case GamePhase.aiming:
-                Debug.LogWarning("AIMING MODE"); 
-                cueBallController.enabled = false;
-                poolStickController.enabled = true;
-                break;*/
+                poolStickController.StartAiming(); 
+                break;
 
             /*case GamePhase.firing:
                 break;

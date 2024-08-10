@@ -15,21 +15,16 @@ public class CueBallController : MonoBehaviour
 
     private void Update()
     {
-        Vector3 newPosition = transform.position;
-        newPosition.y = originalYPosition;
-        transform.position = newPosition;
-        if (TryGetComponent(out Rigidbody rb))
-            rb.velocity = Vector3.zero;
-
-        if (GameManager.Instance.gamePhase == GamePhase.movingBall)
+        if (IsMovingBallPhase())
         {
-            
+            KeepBallAtOriginalHeight();
+            StopBallMovement();
         }
     }
 
     private void OnMouseDown()
     {
-        if (GameManager.Instance.gamePhase == GamePhase.movingBall)
+        if (IsMovingBallPhase())
         {
             mousePosition = Input.mousePosition - GetMousePos();
             ballCollider.isTrigger = true;
@@ -38,22 +33,52 @@ public class CueBallController : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (GameManager.Instance.gamePhase == GamePhase.movingBall)
+        if (IsMovingBallPhase())
         {
-            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
+            MoveBallWithMouse();
         }
-
     }
 
     private void OnMouseUp()
     {
         ballCollider.isTrigger = false;
-        transform.position = new Vector3(transform.position.x, originalYPosition, transform.position.z);
-        if (TryGetComponent(out Rigidbody rb))
-            rb.velocity = Vector3.zero;
+        ResetBallPosition();
+        StopBallMovement();
 
-        if (GameManager.Instance.gamePhase == GamePhase.movingBall)
+        if (IsMovingBallPhase())
+        {
             GameManager.Instance.AdvancePhase();
+        }
+    }
+
+    private bool IsMovingBallPhase()
+    {
+        return GameManager.Instance.gamePhase == GamePhase.movingBall;
+    }
+
+    private void KeepBallAtOriginalHeight()
+    {
+        Vector3 newPosition = transform.position;
+        newPosition.y = originalYPosition;
+        transform.position = newPosition;
+    }
+
+    private void StopBallMovement()
+    {
+        if (TryGetComponent(out Rigidbody rb))
+        {
+            rb.velocity = Vector3.zero;
+        }
+    }
+
+    private void MoveBallWithMouse()
+    {
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
+    }
+
+    private void ResetBallPosition()
+    {
+        transform.position = new Vector3(transform.position.x, originalYPosition, transform.position.z);
     }
 
     private Vector3 GetMousePos()
