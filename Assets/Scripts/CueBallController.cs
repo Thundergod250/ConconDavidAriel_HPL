@@ -15,13 +15,15 @@ public class CueBallController : MonoBehaviour
 
     private void Update()
     {
+        Vector3 newPosition = transform.position;
+        newPosition.y = originalYPosition;
+        transform.position = newPosition;
+        if (TryGetComponent(out Rigidbody rb))
+            rb.velocity = Vector3.zero;
+
         if (GameManager.Instance.gamePhase == GamePhase.movingBall)
         {
-            Vector3 newPosition = transform.position;
-            newPosition.z = originalYPosition;
-            transform.position = newPosition;
-            if (TryGetComponent(out Rigidbody rb))
-                rb.velocity = Vector3.zero;
+            
         }
     }
 
@@ -40,7 +42,7 @@ public class CueBallController : MonoBehaviour
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
         }
-        
+
     }
 
     private void OnMouseUp()
@@ -51,7 +53,7 @@ public class CueBallController : MonoBehaviour
             rb.velocity = Vector3.zero;
 
         if (GameManager.Instance.gamePhase == GamePhase.movingBall)
-            GameManager.Instance.AdvancePhase(); 
+            GameManager.Instance.AdvancePhase();
     }
 
     private Vector3 GetMousePos()
