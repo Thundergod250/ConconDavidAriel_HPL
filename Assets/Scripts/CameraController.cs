@@ -5,49 +5,46 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float panSpeed = 20f;      // Speed of the panning movement
-    public float rotationSpeed = 100f; // Speed of the camera rotation
-    public Vector3 panLimitMin;       // Minimum limit for panning
-    public Vector3 panLimitMax;       // Maximum limit for panning
+    [SerializeField] private CinemachineFreeLook freeLookCamera;
+    [SerializeField] private float zoomSpeed = 10f;
+    [SerializeField] private float zoomSmoothTime = 0.2f;
+    [SerializeField] private float minZoom = 2f;
+    [SerializeField] private float maxZoom = 15f;
 
-    private Vector3 initialPosition;
+    private float targetZoom;
+    private float zoomVelocity = 0f;
 
-    void Start()
+    private void Start()
     {
-        // Save the initial position of the camera
-        initialPosition = transform.position;
+        targetZoom = freeLookCamera.m_Orbits[1].m_Radius;
     }
 
-    void Update()
+    private void Update()
     {
-        HandlePanning();
-        HandleRotation();
-    }
-
-    void HandlePanning()
-    {
-        if (Input.GetMouseButton(0)) // Left mouse button
+        if (Input.GetMouseButton(1))
         {
-            float moveX = Input.GetAxis("Mouse X") * panSpeed * Time.deltaTime;
-            float moveZ = Input.GetAxis("Mouse Y") * panSpeed * Time.deltaTime;
-
-            Vector3 newPosition = transform.position + transform.right * moveX + transform.forward * moveZ;
-            newPosition.x = Mathf.Clamp(newPosition.x, panLimitMin.x, panLimitMax.x);
-            newPosition.y = Mathf.Clamp(newPosition.y, panLimitMin.y, panLimitMax.y);
-            newPosition.z = Mathf.Clamp(newPosition.z, panLimitMin.z, panLimitMax.z);
-
-            transform.position = newPosition;
+            freeLookCamera.m_XAxis.m_InputAxisName = "Mouse X";
+            freeLookCamera.m_YAxis.m_InputAxisName = "Mouse Y";
         }
-    }
-
-    void HandleRotation()
-    {
-        if (Input.GetMouseButton(1)) // Right mouse button
+        else
         {
-            float rotationX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+            freeLookCamera.m_XAxis.m_InputAxisName = "";
+            freeLookCamera.m_YAxis.m_InputAxisName = "";
+        }
 
-            // Rotate the camera around its Y-axis (left-right)
-            transform.Rotate(0, rotationX, 0, Space.World);
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        if (scrollInput != 0)
+        {
+            targetZoom -= scrollInput * zoomSpeed;
+            targetZoom = Mathf.Clamp(targetZoom, minZoom, maxZoom);
+        }
+
+        float currentZoom = freeLookCamera.m_Orbits[1].m_Radius;
+        float smoothZoom = Mathf.SmoothDamp(currentZoom, targetZoom, ref zoomVelocity, zoomSmoothTime);
+
+        for (int i = 0; i < freeLookCamera.m_Orbits.Length; i++)
+        {
+            freeLookCamera.m_Orbits[i].m_Radius = smoothZoom;
         }
     }
 }
