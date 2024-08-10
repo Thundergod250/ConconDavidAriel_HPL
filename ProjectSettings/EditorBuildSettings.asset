@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/PoolTrickshotMaster.unity
+    guid: ee9675e3849fc714da407b6d6622e0a7
   m_configObjects: {}
