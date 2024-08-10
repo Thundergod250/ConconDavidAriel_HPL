@@ -16,13 +16,18 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public int score = 0;
+    public int currentMoves = 0;
+    public int moveLimit = 0;
     public GamePhase gamePhase = GamePhase.movingBall;
+    [SerializeField] private GameObject whiteBall;
     [SerializeField] private CueBallController cueBallController;
     [SerializeField] private PoolAiming poolAiming;
     [SerializeField] private PoolFiring poolFiring;
     [SerializeField] private PoolStickController poolStickController;
     [SerializeField] private float delayTime = 1f;
-    private GamePhase phaseHolder; 
+    [SerializeField] private float stopThreshold = 0.01f;
+    private GamePhase phaseHolder;
+    private Rigidbody whiteBallRb;
 
     private void Awake()
     {
@@ -36,10 +41,18 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        whiteBallRb = whiteBall.GetComponent<Rigidbody>();
+    }
+
     public void AdvancePhase()
     {
-        gamePhase = (GamePhase)(((int)phaseHolder + 1) % Enum.GetNames(typeof(GamePhase)).Length);
-        PlayNextPhase(gamePhase); 
+        if (phaseHolder != GamePhase.waiting)
+            gamePhase = (GamePhase)(((int)phaseHolder + 1) % Enum.GetNames(typeof(GamePhase)).Length);
+        else
+            gamePhase = (GamePhase)(((int)phaseHolder + 2) % Enum.GetNames(typeof(GamePhase)).Length);
+        PlayNextPhase(gamePhase);
     }
 
     public void DelayAndAdvance()
@@ -72,8 +85,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GamePhase.waiting:
-                cueBallController.enabled = false;
-                poolStickController.enabled = false;
+                StartCoroutine(WaitForBallToStop());
                 break;
 
             case GamePhase.delay:
@@ -82,6 +94,17 @@ public class GameManager : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+
+    private IEnumerator WaitForBallToStop()
+    {
+        while (whiteBallRb.velocity.magnitude > stopThreshold)
+        {
+            whiteBallRb.velocity *= 0.95f; 
+            yield return null; 
+        }
+        whiteBallRb.velocity = Vector3.zero;
+        DelayAndAdvance();
     }
 
     public void SetPhase(GamePhase phase)

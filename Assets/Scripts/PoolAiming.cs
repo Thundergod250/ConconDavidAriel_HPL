@@ -10,6 +10,10 @@ public class PoolAiming : MonoBehaviour
     private bool isAiming = false;
     private bool isAimingActive = false;
 
+    private void OnEnable()
+    {
+        transform.position = whiteBall.position;
+    }
 
     private void Update()
     {
