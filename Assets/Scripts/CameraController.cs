@@ -15,7 +15,6 @@ public class CameraController : MonoBehaviour
     private Quaternion topViewRotation;
     private float targetZoom;
     private float zoomVelocity = 0f;
-    private bool isTopView = false;
 
     private void Start()
     {

@@ -9,6 +9,23 @@ public class GameplayUI : MonoBehaviour
 
     private void Start()
     {
-        
+        mainText.text = "Click and drag the White Ball";
+        GameManager.Instance.EvtPhaseChanged.AddListener(OnPhaseChange); 
+    }
+
+    private void OnPhaseChange(GamePhase gamePhase)
+    {
+        if (gamePhase == GamePhase.movingBall)
+        {
+            mainText.text = "Click and drag the White Ball";
+        }
+        else if (gamePhase == GamePhase.aiming)
+        {
+            mainText.text = "Up and Down your mouse to Aim";
+        }
+        else if (gamePhase == GamePhase.firing)
+        {
+            mainText.text = "Up and Down your mouse to change Power";
+        }
     }
 }

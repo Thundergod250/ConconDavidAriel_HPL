@@ -49,7 +49,7 @@ public class PoolAiming : MonoBehaviour
     {
         if (IsAimingPhase())
         {
-            float rotationInput = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+            float rotationInput = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
             transform.RotateAround(whiteBall.position, Vector3.up, rotationInput);
         }
     }

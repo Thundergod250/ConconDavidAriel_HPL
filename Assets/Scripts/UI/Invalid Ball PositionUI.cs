@@ -24,7 +24,7 @@ public class InvalidBallPositionUI : MonoBehaviour
 
     private void OnOutsideRange()
     {
-        invalidText.text = "Invalid Ball Position";
+        invalidText.text = "Ball Out of Bounds";
         invalidText.alpha = 1f; 
         StartCoroutine(FadeOutText());
     }

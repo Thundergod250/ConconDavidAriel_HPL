@@ -15,8 +15,6 @@ public class PoolFiring : MonoBehaviour
     private Quaternion originalPivotRotation;
     private Vector3 initialStickPosition;
     private Quaternion initialStickRotation;
-    private bool isAiming = false;
-    private bool isAimingActive = false;
 
     private void OnEnable()
     {
@@ -42,9 +40,10 @@ public class PoolFiring : MonoBehaviour
     {
         if (IsFiringPhase())
         {
-            Vector3 direction = (whiteBall.position - poolStick.position).normalized;
+            Vector3 direction = new Vector3(whiteBall.position.x - poolStick.position.x, 0f, whiteBall.position.z - poolStick.position.z).normalized;
+
             Rigidbody whiteBallRigidbody = whiteBall.GetComponent<Rigidbody>();
-            whiteBallRigidbody.AddForce(direction * hitForceMultiplier * pullBackDistance, ForceMode.Impulse);
+            whiteBallRigidbody.AddForce(hitForceMultiplier * pullBackDistance * direction, ForceMode.Impulse);
             CancelAiming();
         }
     }
@@ -68,9 +67,7 @@ public class PoolFiring : MonoBehaviour
             transform.rotation = originalPivotRotation;
             poolStick.localPosition = initialStickPosition;
             poolStick.localRotation = initialStickRotation;
-            isAiming = false;
             pullBackDistance = 0f;
-            isAimingActive = false;
         }
 
         EndPhase(); 

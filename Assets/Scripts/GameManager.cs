@@ -16,7 +16,9 @@ public enum GamePhase
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public UnityEvent<int, int> EvtUIChanged; 
+    public UnityEvent<int, int> EvtUIChanged;
+    public UnityEvent EvtScored;
+    public UnityEvent<GamePhase> EvtPhaseChanged;
     public int BallsRequired = 1; 
     public int CurrentMoves = 0;
     public GamePhase gamePhase = GamePhase.movingBall;
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
         else
             gamePhase = (GamePhase)(((int)phaseHolder + 2) % Enum.GetNames(typeof(GamePhase)).Length);
         PlayNextPhase(gamePhase);
+        EvtPhaseChanged?.Invoke(gamePhase); 
     }
 
     public void DelayAndAdvance()
@@ -114,7 +117,10 @@ public class GameManager : MonoBehaviour
     public void PocketBall(int amount)
     {
         BallsRequired -= amount;
+        if (BallsRequired < 0)
+            BallsRequired = 0; 
         EvtUIChanged?.Invoke(CurrentMoves, BallsRequired);
+        EvtScored?.Invoke(); 
     }
 
     public void AddMoves(int amount)
