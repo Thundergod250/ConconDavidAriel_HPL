@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
     public UnityEvent EvtRoundCleared;
     public UnityEvent EvtRoundLost;
     public int BallsRequired = 1; 
-    public int CurrentMoves = 0;
     public GamePhase gamePhase = GamePhase.movingBall;
     [SerializeField] private GameObject whiteBall;
     [SerializeField] private CueBallController cueBallController;
@@ -30,6 +29,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PoolFiring poolFiring;
     [SerializeField] private float delayTime = 1f;
     [SerializeField] private float stopThreshold = 0.01f;
+    private int CurrentMoves = 0;
     private int MaxMoves = 5;
     private GamePhase phaseHolder;
     private Rigidbody whiteBallRb;
@@ -127,19 +127,17 @@ public class GameManager : MonoBehaviour
     {
         BallsRequired -= amount;
         if (BallsRequired < 0)
-            BallsRequired = 0; 
+            BallsRequired = 0;
+        CheckNextRound();
         EvtUIChanged?.Invoke(CurrentMoves, BallsRequired);
         EvtScored?.Invoke();
-
-        CheckNextRound(); 
     }
 
     public void AddMoves(int amount)
     {
         CurrentMoves += amount;
+        CheckGameOver();
         EvtUIChanged?.Invoke(CurrentMoves, BallsRequired);
-
-        CheckGameOver(); 
     }
 
     public void SetBallsRequired(int value)
