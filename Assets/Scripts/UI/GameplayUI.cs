@@ -10,7 +10,8 @@ public class GameplayUI : MonoBehaviour
     private void Start()
     {
         mainText.text = "Click and drag the White Ball";
-        GameManager.Instance.EvtPhaseChanged.AddListener(OnPhaseChange); 
+        if (GameManager.HasInstance())
+            GameManager.Instance.EvtPhaseChanged.AddListener(OnPhaseChange); 
     }
 
     private void OnPhaseChange(GamePhase gamePhase)

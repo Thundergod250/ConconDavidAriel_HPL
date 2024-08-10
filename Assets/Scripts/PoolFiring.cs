@@ -75,7 +75,8 @@ public class PoolFiring : MonoBehaviour
 
     private void EndPhase()
     {
-        GameManager.Instance.DelayAndAdvance();
+        if (GameManager.HasInstance())
+            GameManager.Instance.DelayAndAdvance();
         this.enabled = false; 
     }
 

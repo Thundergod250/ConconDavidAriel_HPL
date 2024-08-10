@@ -45,7 +45,7 @@ public class CueBallController : MonoBehaviour
         ResetBallPosition();
         StopBallMovement();
 
-        if (IsMovingBallPhase())
+        if (IsMovingBallPhase() && GameManager.HasInstance())
         {
             GameManager.Instance.DelayAndAdvance();
         }

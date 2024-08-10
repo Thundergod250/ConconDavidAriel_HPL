@@ -10,7 +10,8 @@ public class PointSystem : MonoBehaviour
         if (other.GetComponent<BilliardBall>() != null)
         {
             other.gameObject.SetActive(false);
-            GameManager.Instance.PocketBall(1); 
+            if (GameManager.HasInstance())
+                GameManager.Instance.PocketBall(1); 
         }
     }
 }

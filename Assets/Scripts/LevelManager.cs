@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.SetBallsRequired(requiredBalls);
+        if (GameManager.HasInstance())
+            GameManager.Instance.SetBallsRequired(requiredBalls);
     }
 }

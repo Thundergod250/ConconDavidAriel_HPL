@@ -53,6 +53,11 @@ public class GameManager : MonoBehaviour
         EvtUIChanged?.Invoke(CurrentMoves, BallsRequired); 
     }
 
+    public static bool HasInstance()
+    {
+        return Instance != null;
+    }
+
     public void AdvancePhase()
     {
         if (phaseHolder != GamePhase.waiting)
@@ -81,10 +86,10 @@ public class GameManager : MonoBehaviour
         switch (gamePhase)
         {
             case GamePhase.movingBall:
+                AddMoves(1);
                 break;
 
-            case GamePhase.aiming:
-                AddMoves(1); 
+            case GamePhase.aiming: 
                 poolAiming.enabled = true;
                 poolAiming.StartAiming();
                 break;
@@ -151,7 +156,7 @@ public class GameManager : MonoBehaviour
 
     private void CheckGameOver()
     {
-        if (CurrentMoves >= 5)
+        if (CurrentMoves > 5)
             EvtRoundLost?.Invoke();
     }
 }

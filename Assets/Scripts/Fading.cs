@@ -10,7 +10,8 @@ public class Fading : MonoBehaviour
     
     private void Start()
     {
-        GameManager.Instance.EvtRoundCleared.AddListener(OnRoundCleared); 
+        if (GameManager.HasInstance())
+            GameManager.Instance.EvtRoundCleared.AddListener(OnRoundCleared); 
         FadeIn();
     }
     

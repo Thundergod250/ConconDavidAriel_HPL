@@ -6,14 +6,13 @@ using UnityEngine.UI;
 
 public class WinOrLose : MonoBehaviour
 {
-    [SerializeField] private GameObject GameOverScreen;
-    [SerializeField] private Image gameOverPanelImage;
-    [SerializeField] private float fadeSpeed = 1f;
-
     private void Start()
     {
-        GameManager.Instance.EvtRoundCleared.AddListener(OnRoundCleared);
-        GameManager.Instance.EvtRoundLost.AddListener(OnRoundLost);
+        if (GameManager.HasInstance())
+        {
+            GameManager.Instance.EvtRoundCleared.AddListener(OnRoundCleared);
+            GameManager.Instance.EvtRoundLost.AddListener(OnRoundLost);
+        }
     }
 
     private void OnRoundCleared()
@@ -23,7 +22,7 @@ public class WinOrLose : MonoBehaviour
 
     private void OnRoundLost()
     {
-        OpenGameOverScreen();
+        PlayGameOverScene();
     }
 
     public void PlayNextScene()
@@ -41,33 +40,9 @@ public class WinOrLose : MonoBehaviour
         }
     }
 
-    private void OpenGameOverScreen()
+    private void PlayGameOverScene()
     {
-        GameOverScreen.SetActive(true);
-        StartCoroutine(FadeInGameOverScreen());
-    }
-
-    private IEnumerator FadeInGameOverScreen()
-    {
-        Color color = gameOverPanelImage.color;
-        color.a = 0f;
-        gameOverPanelImage.color = color;
-
-        while (color.a < 1f)
-        {
-            color.a += fadeSpeed * Time.deltaTime;
-            gameOverPanelImage.color = color;
-            yield return null;
-        }
-    }
-
-    public void PlayStartScene()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
+        int lastSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
+        SceneManager.LoadScene(lastSceneIndex);
     }
 }

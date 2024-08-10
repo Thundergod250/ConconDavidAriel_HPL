@@ -14,8 +14,11 @@ public class QuestUI : MonoBehaviour
     private void Start()
     {
         scoreText.text = string.Empty;
-        GameManager.Instance.EvtUIChanged.AddListener(OnUpdateQuestUI);
-        GameManager.Instance.EvtScored.AddListener(OnScored);
+        if (GameManager.HasInstance())
+        {
+            GameManager.Instance.EvtUIChanged.AddListener(OnUpdateQuestUI);
+            GameManager.Instance.EvtScored.AddListener(OnScored);
+        }
     }
 
     private void OnScored()
