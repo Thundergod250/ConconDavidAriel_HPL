@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class CueBallController : MonoBehaviour
 {
-    [SerializeField] private float liftHeight = 1f;
-    [SerializeField] private LayerMask ballLayerMask;
-    [SerializeField] private LayerMask tableLayerMask;
-    [SerializeField] private float minDistanceFromBall = 0.5f;
-    [SerializeField] private float tableBoundaryMargin = 0.2f;
-    [SerializeField] private Rigidbody[] otherBalls;
-
-    private Vector3 initialPosition;
+    [SerializeField] private float originalYPosition = 0.3172536f;
     private Vector3 mousePosition;
-    private bool isDragging = false;
     private Collider ballCollider;
 
     private void Start()
@@ -21,44 +13,49 @@ public class CueBallController : MonoBehaviour
         ballCollider = GetComponent<Collider>(); 
     }
 
+    private void Update()
+    {
+        if (GameManager.Instance.gamePhase == GamePhase.movingBall)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.z = originalYPosition;
+            transform.position = newPosition;
+            if (TryGetComponent(out Rigidbody rb))
+                rb.velocity = Vector3.zero;
+        }
+    }
+
     private void OnMouseDown()
     {
-        mousePosition = Input.mousePosition - GetMousePos();
-        ballCollider.isTrigger = true; 
-        /*if (otherBalls != null)
+        if (GameManager.Instance.gamePhase == GamePhase.movingBall)
         {
-            foreach (Rigidbody rb in otherBalls)
-            {
-                rb.isKinematic = true; 
-            }
-        }*/
+            mousePosition = Input.mousePosition - GetMousePos();
+            ballCollider.isTrigger = true;
+        }
     }
 
     private void OnMouseDrag()
     {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
+        if (GameManager.Instance.gamePhase == GamePhase.movingBall)
+        {
+            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
+        }
+        
     }
 
     private void OnMouseUp()
     {
-        ballCollider.isTrigger = false;/*
-        if (otherBalls != null)
-        {
-            foreach (Rigidbody rb in otherBalls)
-            {
-                rb.isKinematic = false;
-            }
-        }*/
+        ballCollider.isTrigger = false;
+        transform.position = new Vector3(transform.position.x, originalYPosition, transform.position.z);
+        if (TryGetComponent(out Rigidbody rb))
+            rb.velocity = Vector3.zero;
+
+        if (GameManager.Instance.gamePhase == GamePhase.movingBall)
+            GameManager.Instance.AdvancePhase(); 
     }
 
     private Vector3 GetMousePos()
     {
         return Camera.main.WorldToScreenPoint(transform.position);
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, minDistanceFromBall);
     }
 }

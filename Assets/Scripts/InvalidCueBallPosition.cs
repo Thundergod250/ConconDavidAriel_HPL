@@ -14,6 +14,7 @@ public class InvalidCueBallPosition : MonoBehaviour
         {
             cueBallController.gameObject.transform.position = ballOrigin.position;
             cueBallController.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            cueBallController.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             EvtBallInvalidPosition?.Invoke();
         }
     }
