@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7613946330864142350}
   - component: {fileID: 4543510547317379035}
   - component: {fileID: 1611115669132686423}
+  - component: {fileID: 5635398750312602467}
   - component: {fileID: 3286122445333392907}
   m_Layer: 0
   m_Name: 10 - Blue
@@ -135,6 +136,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5635398750312602467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2973982556966367751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c13729563c89fe41846c996eb50fccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3286122445333392907
 MonoBehaviour:
   m_ObjectHideFlags: 0
