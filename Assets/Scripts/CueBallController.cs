@@ -47,7 +47,7 @@ public class CueBallController : MonoBehaviour
 
         if (IsMovingBallPhase())
         {
-            GameManager.Instance.AdvancePhase();
+            GameManager.Instance.DelayAndAdvance();
         }
     }
 

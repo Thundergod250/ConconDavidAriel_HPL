@@ -8,7 +8,8 @@ public enum GamePhase
     movingBall,
     aiming, 
     firing, 
-    waiting
+    waiting, 
+    delay
 }
 
 public class GameManager : MonoBehaviour
@@ -16,9 +17,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public int score = 0;
     public GamePhase gamePhase = GamePhase.movingBall;
-
     [SerializeField] private CueBallController cueBallController;
+    [SerializeField] private PoolAiming poolAiming;
+    [SerializeField] private PoolFiring poolFiring;
     [SerializeField] private PoolStickController poolStickController;
+    [SerializeField] private float delayTime = 1f;
+    private GamePhase phaseHolder; 
 
     private void Awake()
     {
@@ -34,8 +38,21 @@ public class GameManager : MonoBehaviour
 
     public void AdvancePhase()
     {
-        gamePhase = (GamePhase)(((int)gamePhase + 1) % Enum.GetNames(typeof(GamePhase)).Length);
+        gamePhase = (GamePhase)(((int)phaseHolder + 1) % Enum.GetNames(typeof(GamePhase)).Length);
         PlayNextPhase(gamePhase); 
+    }
+
+    public void DelayAndAdvance()
+    {
+        phaseHolder = gamePhase; 
+        gamePhase = GamePhase.delay;
+        StartCoroutine(DelayedAdvance());
+    }
+
+    private IEnumerator DelayedAdvance()
+    {
+        yield return new WaitForSeconds(delayTime);
+        AdvancePhase();
     }
 
     private void PlayNextPhase(GamePhase gamePhase)
@@ -46,16 +63,21 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GamePhase.aiming:
-                poolStickController.StartAiming(); 
+                poolAiming.enabled = true;
+                poolAiming.StartAiming();
                 break;
 
-            /*case GamePhase.firing:
+            case GamePhase.firing:
+                poolFiring.enabled = true;
                 break;
 
             case GamePhase.waiting:
                 cueBallController.enabled = false;
                 poolStickController.enabled = false;
-                break;*/
+                break;
+
+            case GamePhase.delay:
+                break;
 
             default:
                 throw new ArgumentOutOfRangeException();

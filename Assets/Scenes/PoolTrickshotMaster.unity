@@ -1131,7 +1131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405884842}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10361309, y: -0.8959644, z: 0.29049858, w: 0.3195666}
+  m_LocalRotation: {x: -0.10361307, y: 0.8959644, z: -0.29049855, w: -0.31956658}
   m_LocalPosition: {x: 0, y: 0, z: 0.0000014305115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3120,13 +3120,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1373681205}
   - component: {fileID: 1373681206}
+  - component: {fileID: 1373681208}
+  - component: {fileID: 1373681207}
   m_Layer: 0
   m_Name: PoolStick Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1373681205
 Transform:
   m_ObjectHideFlags: 0
@@ -3150,7 +3152,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373681204}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cea90ff1a0d54814c9ab70185e9a98f1, type: 3}
   m_Name: 
@@ -3161,6 +3163,37 @@ MonoBehaviour:
   maxPullBackDistance: 1.5
   hitForceMultiplier: 5
   sensitivity: 1.1
+--- !u!114 &1373681207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373681204}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7908f4c16eaf5418557756958ad2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteBall: {fileID: 9023187637871795691}
+  poolStick: {fileID: 8214237520348168442}
+  maxPullBackDistance: 1.5
+  hitForceMultiplier: 5
+  sensitivity: 1.1
+--- !u!114 &1373681208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373681204}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446282a914c6a8d419bf54ec7eae2cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteBall: {fileID: 9023187637871795691}
+  rotationSpeed: 1000
 --- !u!1 &1385709911
 GameObject:
   m_ObjectHideFlags: 0
@@ -4405,7 +4438,10 @@ MonoBehaviour:
   score: 0
   gamePhase: 0
   cueBallController: {fileID: 9023187637871795695}
+  poolAiming: {fileID: 1373681208}
+  poolFiring: {fileID: 1373681207}
   poolStickController: {fileID: 1373681206}
+  delayTime: 0.5
 --- !u!1 &1687399703
 GameObject:
   m_ObjectHideFlags: 0
@@ -7180,6 +7216,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 330585546}
   - {fileID: 1301840182}
+  - {fileID: 1671730365}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1022805239}
@@ -7193,4 +7230,3 @@ SceneRoots:
   - {fileID: 1547570046}
   - {fileID: 1668648919}
   - {fileID: 206757611}
-  - {fileID: 1671730365}
