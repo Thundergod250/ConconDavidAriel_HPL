@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 16792470}
   - component: {fileID: 16792469}
   - component: {fileID: 16792468}
-  - component: {fileID: 16792471}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -228,19 +227,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16792466}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &16792471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16792466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &23170865
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +270,6 @@ GameObject:
   - component: {fileID: 44406373}
   - component: {fileID: 44406372}
   - component: {fileID: 44406371}
-  - component: {fileID: 44406374}
   m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Untagged
@@ -378,19 +363,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44406369}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &44406374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44406369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &51271960
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +672,6 @@ GameObject:
   - component: {fileID: 304660628}
   - component: {fileID: 304660627}
   - component: {fileID: 304660626}
-  - component: {fileID: 304660629}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
@@ -794,19 +765,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304660624}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &304660629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304660624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &328116776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1498,6 @@ GameObject:
   - component: {fileID: 722293928}
   - component: {fileID: 722293927}
   - component: {fileID: 722293926}
-  - component: {fileID: 722293929}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -1634,19 +1591,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722293924}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &722293929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722293924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &760563500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,7 +1947,6 @@ GameObject:
   - component: {fileID: 844331809}
   - component: {fileID: 844331808}
   - component: {fileID: 844331807}
-  - component: {fileID: 844331810}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -2097,19 +2040,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844331805}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &844331810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844331805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &892281862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,7 +2188,6 @@ GameObject:
   - component: {fileID: 936462051}
   - component: {fileID: 936462050}
   - component: {fileID: 936462049}
-  - component: {fileID: 936462052}
   m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -2352,19 +2281,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936462047}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &936462052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936462047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!4 &972090002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9184904607498186322, guid: 8124d44d5a9ea5c4580ca7a914ae4a56,
@@ -2711,7 +2627,6 @@ GameObject:
   - component: {fileID: 1272775502}
   - component: {fileID: 1272775501}
   - component: {fileID: 1272775500}
-  - component: {fileID: 1272775503}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -2805,19 +2720,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272775498}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1272775503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272775498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &1274014853
 GameObject:
   m_ObjectHideFlags: 3
@@ -3119,7 +3021,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1373681205}
-  - component: {fileID: 1373681206}
   - component: {fileID: 1373681208}
   - component: {fileID: 1373681207}
   m_Layer: 0
@@ -3145,24 +3046,6 @@ Transform:
   - {fileID: 8214237520348168442}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1373681206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373681204}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cea90ff1a0d54814c9ab70185e9a98f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  whiteBall: {fileID: 9023187637871795691}
-  poolStick: {fileID: 8214237520348168442}
-  rotationSpeed: 200
-  maxPullBackDistance: 1.5
-  hitForceMultiplier: 5
-  sensitivity: 1.1
 --- !u!114 &1373681207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3178,7 +3061,7 @@ MonoBehaviour:
   whiteBall: {fileID: 9023187637871795691}
   poolStick: {fileID: 8214237520348168442}
   maxPullBackDistance: 1.5
-  hitForceMultiplier: 5
+  hitForceMultiplier: 3
   sensitivity: 1.1
 --- !u!114 &1373681208
 MonoBehaviour:
@@ -3237,7 +3120,6 @@ GameObject:
   - component: {fileID: 1396876551}
   - component: {fileID: 1396876550}
   - component: {fileID: 1396876549}
-  - component: {fileID: 1396876552}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -3331,19 +3213,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396876547}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1396876552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396876547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &1402914898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3356,7 +3225,6 @@ GameObject:
   - component: {fileID: 1402914902}
   - component: {fileID: 1402914901}
   - component: {fileID: 1402914900}
-  - component: {fileID: 1402914903}
   m_Layer: 0
   m_Name: Cube (14)
   m_TagString: Untagged
@@ -3450,19 +3318,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402914898}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1402914903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402914898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &1417940414
 GameObject:
   m_ObjectHideFlags: 0
@@ -3475,7 +3330,6 @@ GameObject:
   - component: {fileID: 1417940418}
   - component: {fileID: 1417940417}
   - component: {fileID: 1417940416}
-  - component: {fileID: 1417940419}
   m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Untagged
@@ -3569,19 +3423,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417940414}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1417940419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417940414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!4 &1438069296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7765844650503057336, guid: 7c8f4eeb6a7abd14395853eec3dfc49d,
@@ -3606,7 +3447,6 @@ GameObject:
   - component: {fileID: 1457388265}
   - component: {fileID: 1457388264}
   - component: {fileID: 1457388263}
-  - component: {fileID: 1457388266}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -3700,19 +3540,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457388261}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1457388266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457388261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &1501834728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3725,7 +3552,6 @@ GameObject:
   - component: {fileID: 1501834732}
   - component: {fileID: 1501834731}
   - component: {fileID: 1501834730}
-  - component: {fileID: 1501834733}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -3819,19 +3645,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501834728}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1501834733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501834728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &1508564974
 GameObject:
   m_ObjectHideFlags: 0
@@ -3844,7 +3657,6 @@ GameObject:
   - component: {fileID: 1508564978}
   - component: {fileID: 1508564977}
   - component: {fileID: 1508564976}
-  - component: {fileID: 1508564979}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -3938,107 +3750,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508564974}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1508564979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508564974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
---- !u!1001 &1547570046
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.49
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.92
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_Name
-      value: Triangle
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 74d491d39395ebe44957ad76f2d6bedd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 74d491d39395ebe44957ad76f2d6bedd, type: 3}
 --- !u!1 &1594705280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4436,12 +4147,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  currentMoves: 0
+  moveLimit: 0
   gamePhase: 0
+  whiteBall: {fileID: 8460318405729898689}
   cueBallController: {fileID: 9023187637871795695}
   poolAiming: {fileID: 1373681208}
   poolFiring: {fileID: 1373681207}
-  poolStickController: {fileID: 1373681206}
   delayTime: 0.5
+  stopThreshold: 0.01
 --- !u!1 &1687399703
 GameObject:
   m_ObjectHideFlags: 0
@@ -4668,7 +4382,6 @@ GameObject:
   - component: {fileID: 1804052835}
   - component: {fileID: 1804052834}
   - component: {fileID: 1804052833}
-  - component: {fileID: 1804052836}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -4762,19 +4475,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804052831}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1804052836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804052831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &1807395022
 GameObject:
   m_ObjectHideFlags: 0
@@ -5029,7 +4729,6 @@ GameObject:
   - component: {fileID: 1991810297}
   - component: {fileID: 1991810296}
   - component: {fileID: 1991810295}
-  - component: {fileID: 1991810298}
   m_Layer: 0
   m_Name: Cube (12)
   m_TagString: Untagged
@@ -5123,19 +4822,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991810293}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1991810298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991810293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1 &2053157569
 GameObject:
   m_ObjectHideFlags: 0
@@ -5148,7 +4834,6 @@ GameObject:
   - component: {fileID: 2053157573}
   - component: {fileID: 2053157572}
   - component: {fileID: 2053157571}
-  - component: {fileID: 2053157574}
   m_Layer: 0
   m_Name: Cube (15)
   m_TagString: Untagged
@@ -5242,19 +4927,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053157569}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2053157574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053157569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!4 &2080980873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1931913055340028699, guid: 15d68df77ac58c943b90c0791dcdd5da,
@@ -5334,6 +5006,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3184046855297113861, guid: 0eff9404e16b37144b98512e1308ec38,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3184046855297113861, guid: 0eff9404e16b37144b98512e1308ec38,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4209178278486128160, guid: 0eff9404e16b37144b98512e1308ec38,
         type: 3}
       propertyPath: m_Material
@@ -5353,6 +5035,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1022805239}
     m_Modifications:
+    - target: {fileID: 1611115669132686423, guid: 84fa0b3f7877e9247b31f24616dd5cf1,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611115669132686423, guid: 84fa0b3f7877e9247b31f24616dd5cf1,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2364301370011113635, guid: 84fa0b3f7877e9247b31f24616dd5cf1,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -5484,7 +5176,6 @@ GameObject:
   - component: {fileID: 6976916836250867138}
   - component: {fileID: 6883418006036980271}
   - component: {fileID: 7254209776427778245}
-  - component: {fileID: 7254209776427778246}
   m_Layer: 0
   m_Name: ColliderUpper
   m_TagString: Untagged
@@ -5565,6 +5256,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: 11 - Red
       objectReference: {fileID: 0}
+    - target: {fileID: 4213757898060401037, guid: afaf46e70a5e7e742a6dc81f8b3319b1,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213757898060401037, guid: afaf46e70a5e7e742a6dc81f8b3319b1,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8612694660447235218, guid: afaf46e70a5e7e742a6dc81f8b3319b1,
         type: 3}
       propertyPath: m_Material
@@ -5588,7 +5289,6 @@ GameObject:
   - component: {fileID: 4993571811921080874}
   - component: {fileID: 703531450900053207}
   - component: {fileID: 8010180415381577886}
-  - component: {fileID: 8010180415381577887}
   m_Layer: 0
   m_Name: ColliderBottom
   m_TagString: Untagged
@@ -5646,6 +5346,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1022805239}
     m_Modifications:
+    - target: {fileID: 2387592843910970965, guid: 9dde933e7c8659545bf15de6e1fd7809,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387592843910970965, guid: 9dde933e7c8659545bf15de6e1fd7809,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4276170420181285021, guid: 9dde933e7c8659545bf15de6e1fd7809,
         type: 3}
       propertyPath: m_Name
@@ -5832,6 +5542,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4110245575446916058, guid: 85f604b6598329c40a122e4cfb3b8944,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110245575446916058, guid: 85f604b6598329c40a122e4cfb3b8944,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5398593963643140200, guid: 85f604b6598329c40a122e4cfb3b8944,
         type: 3}
       propertyPath: m_Name
@@ -5860,6 +5580,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 8 - Black
+      objectReference: {fileID: 0}
+    - target: {fileID: 5415924033475424516, guid: 24e6023eb0cbbf84eae48abb55c042b2,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5415924033475424516, guid: 24e6023eb0cbbf84eae48abb55c042b2,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7873614280816749948, guid: 24e6023eb0cbbf84eae48abb55c042b2,
         type: 3}
@@ -5948,6 +5678,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1022805239}
     m_Modifications:
+    - target: {fileID: 1138928068966987368, guid: 8124d44d5a9ea5c4580ca7a914ae4a56,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1138928068966987368, guid: 8124d44d5a9ea5c4580ca7a914ae4a56,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4917047368777143137, guid: 8124d44d5a9ea5c4580ca7a914ae4a56,
         type: 3}
       propertyPath: m_Name
@@ -6032,6 +5772,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1022805239}
     m_Modifications:
+    - target: {fileID: 2597581809303582164, guid: e70015dfed60397468692676de6164ed,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597581809303582164, guid: e70015dfed60397468692676de6164ed,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8255766168858361984, guid: e70015dfed60397468692676de6164ed,
         type: 3}
       propertyPath: m_Material
@@ -6186,6 +5936,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2315863629524980723, guid: 46ee771889b0bc84c9caa569a9d1589c,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315863629524980723, guid: 46ee771889b0bc84c9caa569a9d1589c,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7427333447837817049, guid: 46ee771889b0bc84c9caa569a9d1589c,
         type: 3}
       propertyPath: m_Material
@@ -6229,7 +5989,6 @@ GameObject:
   - component: {fileID: 7105759636444598899}
   - component: {fileID: 933875699546405746}
   - component: {fileID: 7105759636444598900}
-  - component: {fileID: 7105759636444598901}
   m_Layer: 0
   m_Name: ColliderMiddle
   m_TagString: Untagged
@@ -6255,6 +6014,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 15 - DarkRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331996051071455778, guid: b595452e3f4fd2d4ba17ce5ce3c932c2,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331996051071455778, guid: b595452e3f4fd2d4ba17ce5ce3c932c2,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3766862644535270002, guid: b595452e3f4fd2d4ba17ce5ce3c932c2,
         type: 3}
@@ -6395,6 +6164,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7019315855378974847, guid: 9f8b81f9974f4b146afe1071e9242e03,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019315855378974847, guid: 9f8b81f9974f4b146afe1071e9242e03,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7479453288205811012, guid: 9f8b81f9974f4b146afe1071e9242e03,
         type: 3}
       propertyPath: m_Name
@@ -6479,6 +6258,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1022805239}
     m_Modifications:
+    - target: {fileID: 191444751205995253, guid: 7c8f4eeb6a7abd14395853eec3dfc49d,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 191444751205995253, guid: 7c8f4eeb6a7abd14395853eec3dfc49d,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3943084388720639591, guid: 7c8f4eeb6a7abd14395853eec3dfc49d,
         type: 3}
       propertyPath: m_Name
@@ -6608,19 +6397,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8929142944433575074, guid: 15354620f242d0a4fb709dc1224f8823, type: 3}
---- !u!114 &7105759636444598901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5894970540541260518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!4 &7254209776427778244
 Transform:
   m_ObjectHideFlags: 0
@@ -6658,19 +6434,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1180430722880824240, guid: 15354620f242d0a4fb709dc1224f8823, type: 3}
---- !u!114 &7254209776427778246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404390387489315066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1001 &7898930682686512652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6750,6 +6513,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 13400000, guid: 1b5f11d6065418646be04a16234d6691,
         type: 2}
+    - target: {fileID: 6286558821482851582, guid: 15d68df77ac58c943b90c0791dcdd5da,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286558821482851582, guid: 15d68df77ac58c943b90c0791dcdd5da,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6792,19 +6565,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5542009894349917962, guid: 15354620f242d0a4fb709dc1224f8823, type: 3}
---- !u!114 &8010180415381577887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702353209755773341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea77013dbac104c4e89cb0bd1fd6e6a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
 --- !u!1001 &8048647938211838365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6884,6 +6644,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: 12 - DarkBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 7598942254013092512, guid: 91372c2e15e135f438175bcb3e53d1cb,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598942254013092512, guid: 91372c2e15e135f438175bcb3e53d1cb,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6957,7 +6727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8599c434860ad3d46a9bb704b935aced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolStickController: {fileID: 1373681206}
+  poolStickController: {fileID: 0}
 --- !u!1 &8460318405729898689 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 823626487378820552, guid: 46ee771889b0bc84c9caa569a9d1589c,
@@ -7020,6 +6790,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 13 - Orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098076114760308131, guid: a5ae9bfcf0acd2e4bac2aa1f684386ac,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098076114760308131, guid: a5ae9bfcf0acd2e4bac2aa1f684386ac,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3932100289815854206, guid: a5ae9bfcf0acd2e4bac2aa1f684386ac,
         type: 3}
@@ -7139,6 +6919,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: 9 - Yellow
       objectReference: {fileID: 0}
+    - target: {fileID: 6721249878597962852, guid: 799f7cc803e637941a1b80030d34ce01,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6721249878597962852, guid: 799f7cc803e637941a1b80030d34ce01,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8070228205627122452, guid: 799f7cc803e637941a1b80030d34ce01,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -7227,6 +7017,5 @@ SceneRoots:
   - {fileID: 1776003628}
   - {fileID: 1833254527}
   - {fileID: 91684823}
-  - {fileID: 1547570046}
   - {fileID: 1668648919}
   - {fileID: 206757611}

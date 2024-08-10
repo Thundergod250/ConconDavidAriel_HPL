@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CueBallController cueBallController;
     [SerializeField] private PoolAiming poolAiming;
     [SerializeField] private PoolFiring poolFiring;
-    [SerializeField] private PoolStickController poolStickController;
     [SerializeField] private float delayTime = 1f;
     [SerializeField] private float stopThreshold = 0.01f;
     private GamePhase phaseHolder;
