@@ -12,6 +12,6 @@ public class BallPhysics : MonoBehaviour
         rb.angularDrag = 0.05f;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
 
-        PhysicsMaterial2D mat = new() { bounciness = 0.9f, friction = 0.1f };
+        //PhysicsMaterial2D mat = new() { bounciness = 0.9f, friction = 0.1f };
     }
 }

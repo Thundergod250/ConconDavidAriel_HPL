@@ -10,13 +10,17 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float zoomSmoothTime = 0.2f;
     [SerializeField] private float minZoom = 2f;
     [SerializeField] private float maxZoom = 15f;
+    [SerializeField] private Vector3 topViewPosition = new(0, 30, 0);
 
+    private Quaternion topViewRotation;
     private float targetZoom;
     private float zoomVelocity = 0f;
+    private bool isTopView = false;
 
     private void Start()
     {
         targetZoom = freeLookCamera.m_Orbits[1].m_Radius;
+        topViewRotation = Quaternion.Euler(90, 0, 0);
     }
 
     private void Update()
@@ -46,5 +50,19 @@ public class CameraController : MonoBehaviour
         {
             freeLookCamera.m_Orbits[i].m_Radius = smoothZoom;
         }
+    }
+
+    private void SetTopView()
+    {
+        freeLookCamera.gameObject.SetActive(false);
+        transform.position = topViewPosition;
+        transform.rotation = topViewRotation;
+    }
+
+    private void RestoreFreeLook()
+    {
+        freeLookCamera.gameObject.SetActive(true);
+        transform.position = freeLookCamera.transform.position;
+        transform.rotation = freeLookCamera.transform.rotation;
     }
 }
