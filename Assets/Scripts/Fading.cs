@@ -7,10 +7,11 @@ public class Fading : MonoBehaviour
 {
     [SerializeField] private Image blackImage;
     [SerializeField] private float fadeSpeed = 1f;
-
+    
     private void Start()
     {
-        FadeOut();
+        GameManager.Instance.EvtRoundCleared.AddListener(OnRoundCleared); 
+        FadeIn();
     }
     
     public void FadeIn()
@@ -23,8 +24,12 @@ public class Fading : MonoBehaviour
         StartCoroutine(FadeOutCoroutine());
     }
 
-    IEnumerator FadeInCoroutine()
+    private void OnRoundCleared()
+    {
+        FadeOut(); 
+    }
 
+    private IEnumerator FadeInCoroutine()
     {
         blackImage.gameObject.SetActive(true);
         Color color = blackImage.color;
@@ -41,7 +46,7 @@ public class Fading : MonoBehaviour
         blackImage.gameObject.SetActive(false);
     }
 
-    IEnumerator FadeOutCoroutine()
+    private IEnumerator FadeOutCoroutine()
     {
         blackImage.gameObject.SetActive(true);
         Color color = blackImage.color;

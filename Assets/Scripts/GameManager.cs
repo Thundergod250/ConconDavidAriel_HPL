@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public UnityEvent<int, int> EvtUIChanged;
     public UnityEvent EvtScored;
     public UnityEvent<GamePhase> EvtPhaseChanged;
+    public UnityEvent EvtRoundCleared;
+    public UnityEvent EvtRoundLost;
     public int BallsRequired = 1; 
     public int CurrentMoves = 0;
     public GamePhase gamePhase = GamePhase.movingBall;
@@ -41,12 +43,14 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
         whiteBallRb = whiteBall.GetComponent<Rigidbody>();
+
+        EvtUIChanged?.Invoke(CurrentMoves, BallsRequired); 
     }
 
     public void AdvancePhase()
@@ -120,18 +124,34 @@ public class GameManager : MonoBehaviour
         if (BallsRequired < 0)
             BallsRequired = 0; 
         EvtUIChanged?.Invoke(CurrentMoves, BallsRequired);
-        EvtScored?.Invoke(); 
+        EvtScored?.Invoke();
+
+        CheckNextRound(); 
     }
 
     public void AddMoves(int amount)
     {
         CurrentMoves += amount;
         EvtUIChanged?.Invoke(CurrentMoves, BallsRequired);
+
+        CheckGameOver(); 
     }
 
     public void SetBallsRequired(int value)
     {
         BallsRequired = value;
         EvtUIChanged?.Invoke(CurrentMoves, BallsRequired);
+    }
+
+    private void CheckNextRound()
+    {
+        if (BallsRequired <= 0)
+            EvtRoundCleared?.Invoke();
+    }
+
+    private void CheckGameOver()
+    {
+        if (CurrentMoves >= 5)
+            EvtRoundLost?.Invoke();
     }
 }
