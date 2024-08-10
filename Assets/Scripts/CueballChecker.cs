@@ -16,7 +16,9 @@ public class CueballChecker : MonoBehaviour
         if (distance > maxDistance)
         {
             ball.transform.position = ballOrigin.position;
-            ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            Rigidbody ballRb = ball.GetComponent<Rigidbody>(); 
+            ballRb.velocity = Vector3.zero;
+            ballRb.rotation = Quaternion.identity;
             EvtBallOutsideRange?.Invoke();
         }
     }

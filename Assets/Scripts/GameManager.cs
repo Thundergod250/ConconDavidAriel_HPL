@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum GamePhase
 {
@@ -15,9 +16,9 @@ public enum GamePhase
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public int score = 0;
-    public int currentMoves = 0;
-    public int moveLimit = 0;
+    public UnityEvent<int, int> EvtUIChanged; 
+    public int BallsRequired = 1; 
+    public int CurrentMoves = 0;
     public GamePhase gamePhase = GamePhase.movingBall;
     [SerializeField] private GameObject whiteBall;
     [SerializeField] private CueBallController cueBallController;
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PoolFiring poolFiring;
     [SerializeField] private float delayTime = 1f;
     [SerializeField] private float stopThreshold = 0.01f;
+    private int MaxMoves = 5;
     private GamePhase phaseHolder;
     private Rigidbody whiteBallRb;
 
@@ -75,6 +77,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GamePhase.aiming:
+                AddMoves(1); 
                 poolAiming.enabled = true;
                 poolAiming.StartAiming();
                 break;
@@ -106,13 +109,23 @@ public class GameManager : MonoBehaviour
         DelayAndAdvance();
     }
 
-    public void SetPhase(GamePhase phase)
+    public void SetPhase(GamePhase phase) => gamePhase = phase;
+
+    public void PocketBall(int amount)
     {
-        gamePhase = phase;
+        BallsRequired -= amount;
+        EvtUIChanged?.Invoke(CurrentMoves, BallsRequired);
     }
 
-    public void AddScore(int amount)
+    public void AddMoves(int amount)
     {
-        score += amount;
+        CurrentMoves += amount;
+        EvtUIChanged?.Invoke(CurrentMoves, BallsRequired);
+    }
+
+    public void SetBallsRequired(int value)
+    {
+        BallsRequired = value;
+        EvtUIChanged?.Invoke(CurrentMoves, BallsRequired);
     }
 }

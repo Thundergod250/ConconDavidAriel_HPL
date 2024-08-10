@@ -68,6 +68,7 @@ public class CueBallController : MonoBehaviour
         if (TryGetComponent(out Rigidbody rb))
         {
             rb.velocity = Vector3.zero;
+            rb.rotation = Quaternion.identity;            
         }
     }
 
